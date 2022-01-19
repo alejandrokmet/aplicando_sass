@@ -12,6 +12,13 @@
   transition: box-shadow 0.3s;
 }
 
+.carousel {
+  position: relative;
+  margin-block: 150px;
+  margin-left: 150px;
+  margin-right: 150px;
+}
+
 body {
   background-image: url(../imagenes/bg.jpg);
   background-repeat: no-repeat;
@@ -27,10 +34,10 @@ body {
   display: grid;
   width: 100%;
   height: 50%;
-  margin-bottom: 40%;
+  margin-bottom: 5%;
   margin-top: 5%;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 400px auto auto;
+  grid-template-rows: 1fr;
   grid-template-areas: "boxmodel1 boxmodel2";
 }
 
@@ -42,6 +49,10 @@ body {
 .boxmodel2 {
   margin-right: 15px;
   grid-area: boxmodel2;
+}
+
+h1.titulo {
+  text-align: center;
 }
 
 /*Texto de la página contacto*/
@@ -70,6 +81,7 @@ p {
   margin-top: 0;
   margin-bottom: 1rem;
   margin-left: 35px;
+  text-align: center;
 }
 
 ul {
@@ -96,7 +108,16 @@ ul {
   padding: 10px;
 }
 
+.pt-4 {
+  padding-top: 1.5rem !important;
+  background-color: #212529;
+}
+
+.linkfooter {
+  background-color: #212529;
+}
 .linkfooter a:hover {
+  background-color: #212529;
   background: #01011b;
   transition: 0, 5s;
   border-radius: 5px;
@@ -122,12 +143,13 @@ ul {
 
 @media only screen and (max-width: 700px) {
   .contenedorgrid {
+    display: grid;
     width: 100%;
     height: 100%;
     text-align: justify;
     margin-top: 0%;
-    grid-template-columns: 1fr;
-    grid-template-columns: 300px 300px;
+    grid-template-columns: 300px;
+    grid-template-rows: 1fr 1fr;
     grid-template-areas: "boxmodel1" "boxmodel2";
   }
 
@@ -138,23 +160,41 @@ ul {
   .boxmodel2 {
     grid-area: boxmodel2;
   }
-}
-.contenedorgrid {
-  width: 20%;
-  text-align: justify;
-  margin-top: 0%;
-  grid-template-columns: 1fr;
-  grid-template-columns: 300px 300px;
-  grid-template-areas: "header" "boxmodel1" "boxmodel2";
-}
 
-.boxmodel1 {
-  width: 1000px;
-  margin-top: 45%;
-}
+  h1.titulo {
+    text-align: center;
+  }
 
-.boxmodel2 {
-  width: 1000px;
-  margin-top: 25%;
-  margin-left: 25px;
+  p {
+    font-size: small;
+  }
+}
+@media only screen and (min-width: 701px) and (max-width: 1080px) {
+  body {
+    background-size: cover;
+  }
+
+  .contenedorgrid {
+    display: grid;
+    width: 100%;
+    height: 100%;
+    text-align: justify;
+    margin-top: 0%;
+    grid-template-columns: 300px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "boxmodel1" "boxmodel2";
+  }
+
+  .boxmodel1 {
+    margin-top: 15%;
+  }
+
+  .boxmodel2 {
+    margin-top: 25%;
+    margin-left: 25px;
+  }
+
+  h1.titulo {
+    text-align: center;
+  }
 }/*# sourceMappingURL=estilos.css.map */
